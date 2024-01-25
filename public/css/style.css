@@ -1,0 +1,89 @@
+/* Add any additional styles for the home page */
+
+.hero {
+    background-color: black;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .featured-content {
+    padding: 60px 0;
+  }
+  
+  .featured-content h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    height: 400px;
+    min-height: fit-content;
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .bg-light{
+    min-height: 110px;
+    background: linear-gradient( blue, #1ea7fd)!important;
+  }
+
+  .navbar-light .navbar-nav .nav-link{
+    font-weight: bold;
+    color: white;
+  }
+  .navbar-light .navbar-nav .nav-link:hover{
+    color: hotpink;
+  }
+  .navbar-light .navbar-brand{
+    color: white;
+  }
+
+  .navbar-light .navbar-brand:hover{
+    color: hotpink;
+  }
+
+  .margin-left-20{
+    margin-left: 20px;
+  }
+  .container{
+    position: relative;
+  }
+  
+  .card-body h5{
+    color: red;
+    text-decoration: none;
+  }
+
+  .card-body p{
+    color: blue;
+  }
+
+  a{
+    text-decoration: none;
+}
+
+.footer .col-md-4 h5{
+  color: darkred;
+}
+
+.card img:hover{
+  width: 600px;
+  transition: 0.5s ease-in-out;
+}

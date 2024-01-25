@@ -1,0 +1,129 @@
+<%- include('layout') %>
+    <style>
+        .home {
+            min-height: 100vh;
+            background: url(images/background.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgb(15 15 16 / 92%);
+            background-blend-mode: overlay;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+        }
+
+        
+        .home img {
+            max-width: 310px;
+            border-radius: 80px;
+            margin-right: 35px;
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+        .home-about{
+            max-width: 50%;
+        }
+        .home-about h2 {
+            font-size: 49px;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .home-about p {
+            color: white;
+            font-family: cursive;
+            padding-left: 10px;
+            font-size: 20px;
+            width: 80%;
+        }
+        .home .learn{
+            position: absolute;
+            bottom: 0;
+        }
+        @media(max-width: 850px) {
+            .home {
+                flex-direction: column;
+            }
+
+            .home-about{
+                max-width: 100%;
+            }
+
+            .home img {
+                margin-bottom: 30px;
+                margin-right: 0px;
+            }
+
+            .home .learn{
+                position: relative;
+            }
+
+        }
+       
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(37, 119, 233);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: rgba(92, 92, 221, 0.836);
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <main class="home">
+        <div class="home-about">
+            <h2>A Complete Learning Platform for your aspirations</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio ullam quisquam, et nisi esse eveniet
+                aperiam, voluptates consectetur omnis veritatis amet sapiente non laudantium corporis qui, a blanditiis
+                iure eius?</p>
+        </div>
+        <p align="center" class="learn"><a href="/learn" class="cta-button">Start Learning</a></p>
+        <img src="images/dashboard.png" alt="">
+    </main>
+    <footer class="footer mt-auto py-3" style="
+  background: linear-gradient(45deg, darkblue, lightblue, transparent);
+  ">
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Your go-to resource for Grade 11 and 12 Organic Chemistry, providing comprehensive learning
+                        materials and resources to help students excel in their chemistry studies.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/learn">Learn</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: sitaulaprabesh07@gmail.com<br>Phone: +977 9848589357</p>
+                    <a href="https://prabeshsitaula.com.np/" target="_blank">Prabesh Sitaula</a>
+                </div>
+            </div>
+            <hr>
+            <p class="text-muted">© 2023 My Chemistry Website. All rights reserved.</p>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h5>Advertise with Us</h5>
+                    <p>Place your advertisement content here.</p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>

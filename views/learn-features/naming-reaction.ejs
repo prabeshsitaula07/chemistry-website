@@ -1,0 +1,148 @@
+<%- include('../layout') %>
+<style>
+    .card{
+        height: fit-content;
+    }
+
+    .card-body h5 a{
+        color: red;
+    }
+</style>
+<div class="container">
+  <h2 class="text-center mt-5">Name Reactions</h2>
+
+  <!-- Search bar -->
+  <div class="input-group mb-3 mt-3">
+    <input type="text" id="searchInput" class="form-control" placeholder="Search for reactions">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" onclick="searchReactions()">Search</button>
+    </div>
+  </div>
+
+  <!-- Suggestions container -->
+  <div id="suggestionsContainer" class="mb-3"></div>
+
+  <!-- List of reactions -->
+  <div class="row" id="reactionsList">
+    <% const customReactions = [
+    { title: "2,4 DNP Test", link: "reactions/2,4DNP-test" },
+    { title: "Aldol Condensation", link: "reactions/aldol-condensation" },
+    { title: "Aldol Reaction", link: "reactions/aldol-reaction" },
+    { title: "Benzoin Condensation", link: "reactions/benzoin-condensation" },
+    { title: "Carbylamine Reaction", link: "reactions/carbylamine-reaction" },
+    { title: "Cannizzaro Reaction", link: "reactions/cannizzaro-reaction" },
+    { title: "Claisen Condensation", link: "reactions/claisen-condensation" },
+    { title: "Coupling Reaction", link: "reactions/coupling-reaction" },
+    { title: "Cross Aldol Condensation", link: "reactions/cross-aldol-condensation" },
+    { title: "Diazotization Reaction", link: "reactions/diazotization-reaction" },
+    { title: "Esterification", link: "reactions/esterification" },
+    { title: "Fehlings' Test", link: "reactions/fehlings-test" },
+    { title: "Friedel-Crafts Acylation Reaction", link: "reactions/friedel-crafts-acylation-reaction" },
+    { title: "Friedel-Crafts Alkylation Reaction", link: "reactions/friedel-crafts-alkylation-reaction" },
+    { title: "Gatterman Reaction", link: "reactions/gatterman-reaction" },
+    { title: "Gatterman-Koch Reaction", link: "reactions/gatterman-koch-reaction" },
+    { title: "Hell Volhard Zelinsky (HVZ) Reaction", link: "reactions/hell-volhard-zelinsky-reaction" },
+    { title: "Hoffman's Ammonolysis", link: "reactions/hoffmans-ammonolysis" },
+    { title: "Hoffmann Bromamide Degradation Reaction", link: "reactions/hoffmann-bromamide-degradation-reaction" },
+    { title: "Iodoform Test", link: "reactions/iodoform-test" },
+    { title: "Kolbe's Reaction", link: "reactions/kolbes-reaction" },
+    { title: "Kolbes Reaction (carboxylation)", link: "reactions/kolbes-reaction-carboxylation" },
+    { title: "Kolbes Electrolysis", link: "reactions/kolbes-electrolysis" },
+    { title: "Lucas Test", link: "reactions/lucas-test" },
+    { title: "Markonikovs Reaction", link: "reactions/markonikovs-reaction" },
+    { title: "Oxonolysis", link: "reactions/oxonolysis" },
+    { title: "Oxo Process", link: "reactions/oxo-process" },
+    { title: "Perkin Condensation", link: "reactions/perkin-condensation" },
+    { title: "Reimer-Tiemann Reaction", link: "reactions/reimer-tiemann-reaction" },
+    { title: "Rosenmund Reduction", link: "reactions/rosenmund-reduction" },
+    { title: "Sandmayer Reaction", link: "reactions/sandmayer-reaction" },
+    { title: "Tollens' Test", link: "reactions/tollens-test" },
+    { title: "Williamson Ether Synthesis", link: "reactions/williamson-ether-synthesis" },
+    { title: "Wolff-Kishner Reduction", link: "reactions/wolff-Kishner-reduction" },
+    { title: "Wurtz Fitting Reaction", link: "reactions/wurtz-fitting-reaction" },
+    { title: "Wurtz Reaction", link: "reactions/wurtz-reaction" },
+    /* Add other reactions with titles and links here */
+]; %>
+
+
+    <% for (let i = 0; i < customReactions.length; i++) { %>
+      <div class="col-md-4 reaction-card">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="<%= customReactions[i].link %>"><%= customReactions[i].title %></a>
+            </h5>
+            <p class="card-text">Description of <%= customReactions[i].title %>.</p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</div>
+<footer class="footer mt-auto py-3" style="
+  background: linear-gradient(45deg, darkblue, lightblue, transparent);
+  ">
+     
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>Your go-to resource for Grade 11 and 12 Organic Chemistry, providing comprehensive learning
+                    materials and resources to help students excel in their chemistry studies.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/learn">Learn</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: sitaulaprabesh07@gmail.com<br>Phone: +977 9848589357</p>
+                <a href="https://prabeshsitaula.com.np/" target="_blank">Prabesh Sitaula</a>
+            </div>
+        </div>
+
+        <!-- Advertising Section -->
+       
+        <hr>
+        <p class="text-muted">© 2023 My Chemistry Website. All rights reserved.</p>
+        <div class="row mt-4">
+          <div class="col-md-12">
+              <h5>Advertise with Us</h5>
+              <p>Place your advertisement content here.</p>
+          </div>
+      </div>
+      
+    </div>
+</footer>
+
+<script>
+    function searchReactions() {
+      const searchInput = document.getElementById("searchInput");
+      const searchTerm = searchInput.value.toLowerCase();
+      const reactionsList = document.getElementById("reactionsList");
+      const suggestionsContainer = document.getElementById("suggestionsContainer");
+  
+      // Clear previous suggestions and reaction cards
+      suggestionsContainer.innerHTML = "";
+  
+      // Filter reactions based on the search term
+      const filteredReactions = Array.from(reactionsList.getElementsByClassName("reaction-card")).filter((reaction) => {
+        const title = reaction.querySelector(".card-title a").innerText.toLowerCase();
+        return title.includes(searchTerm);
+      });
+  
+      // Display suggestions and matching reaction cards
+      filteredReactions.forEach((reaction) => {
+        const suggestion = document.createElement("div");
+        suggestion.className = "alert alert-info";
+        suggestion.innerHTML = reaction.querySelector(".card-title").innerHTML;
+        suggestionsContainer.appendChild(suggestion);
+      });
+    }
+</script>
