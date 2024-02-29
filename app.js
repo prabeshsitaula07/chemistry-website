@@ -8,6 +8,7 @@ app.set('view engine', 'ejs');
 // Specify the views directory
 app.set('views', path.join(__dirname, 'views'));
 
+
 // Static files (if you have any)
 app.use(express.static(path.join(__dirname, 'public')));
 

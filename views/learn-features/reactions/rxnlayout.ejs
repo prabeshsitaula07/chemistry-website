@@ -1,0 +1,160 @@
+
+<%- include('../../header.ejs') %>
+
+    <style>
+        .back-btn button {
+            margin: 40px;
+            height: 50px;
+            width: 120px;
+            border-radius: 12px;
+            color: red;
+        }
+
+        .back-btn button:hover {
+            background: darkgray;
+        }
+
+        .card-body p {
+            color: black;
+        }
+
+        .card {
+            height: fit-content;
+            margin-top: 10px;
+            border: 1px solid grey !important;
+            border-radius: 10px !important;
+        }
+
+        .btn-link {
+            text-decoration: none !important;
+        }
+    </style>
+
+    <a href="../naming-reaction" class="back-btn"><button><--Back</button></a>
+    <div class="container" id="mainContainer">
+        <div class="accordion" id="accordionSections">
+
+            <!-- General Reaction Section -->
+            <div class="card" id="cardGeneralReaction">
+                <div class="card-header" id="headingGeneralReaction">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseGeneralReaction')">
+                            ▼ General Reaction
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseGeneralReaction" class="collapse show" aria-labelledby="headingGeneralReaction">
+                    <div class="card-body">
+                        <!-- Your content for General Reaction goes here -->
+                        <p><%= general_reaction %><br>
+                            <br>
+                            <img src=<%= image %> alt="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="card" id="cardDescription">
+                <div class="card-header" id="headingDescription">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseDescription')">
+                            ▶ Description
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseDescription" class="collapse" aria-labelledby="headingDescription">
+                    <div class="card-body">
+                        <!-- Your content for Description goes here -->
+                        <p><%= description %></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Section -->
+            <div class="card" id="cardExample">
+                <div class="card-header" id="headingExample">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseExample')">
+                            ▶ Example
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseExample" class="collapse" aria-labelledby="headingExample">
+                    <div class="card-body">
+                        <!-- Your content for Example goes here -->
+                        <p><%= example %></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="cardApplicationIOC">
+                <div class="card-header" id="headingApplicationIOC">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseApplicationIOC')">
+                            ▶ Application In Organic Chemistry
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseApplicationIOC" class="collapse" aria-labelledby="headingApplicationIOC">
+                    <div class="card-body">
+                        <!-- Your content for Example goes here -->
+                        <p><%= application %></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="cardModernApplication">
+                <div class="card-header" id="headingModernApplication">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseModernApplication')">
+                            ▶ Modern Application
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseModernApplication" class="collapse" aria-labelledby="headingModernApplication">
+                    <div class="card-body">
+                        <!-- Your content for Example goes here -->
+                        <p><%= modern_application %></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="card" id="cardHistory">
+                <div class="card-header" id="headingHistory">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseHistory')">
+                            ▶ History
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseHistory" class="collapse" aria-labelledby="headingHistory">
+                    <div class="card-body">
+                        <!-- Your content for History goes here -->
+                        <p><%= history %></p>
+                        <br><a href="https://www.sciencedirect.com/topics/neuroscience/2-4-dinitrophenol"
+                            target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../script.js"></script> <!-- Assuming your script.js is in the parent directory -->
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('show');
+        }
+    </script>
+
+    <%- include('../../footer.ejs') %>

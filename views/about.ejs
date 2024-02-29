@@ -1,4 +1,4 @@
-<%- include('layout') %>
+<%- include('header.ejs', {title: 'About Us' }) %>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -44,9 +44,10 @@
             min-height: 70vh;
         }
 
-        .about-section p{
+        .about-section p {
             font-family: monospace;
         }
+
         .container {
             padding: 0 16px;
         }
@@ -106,7 +107,7 @@
             font-size: 2.2em;
             font-weight: bold;
             color: #140f0fc2;
-    line-height: 35px;
+            line-height: 35px;
         }
 
         .team-section {
@@ -221,7 +222,7 @@
             margin-bottom: 10px;
         }
 
-        p {
+        .content-container , .about-section p {
             font-size: 1.2em;
             line-height: 1.6;
             color: black;
@@ -237,22 +238,24 @@
         .mission-container,
         .values-container {
             width: 80%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 30px;
-    gap: 20px;
-    background: #8080801c;
-    margin-top: 20px;
-    max-width: 1040px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 30px;
+            gap: 20px;
+            background: #8080801c;
+            margin-top: 20px;
+            max-width: 1040px;
         }
-@media(max-width: 810px){
-    .mission-image-des{
-        flex-direction: column;
-    }
-}
+
+        @media(max-width: 810px) {
+            .mission-image-des {
+                flex-direction: column;
+            }
+        }
+
         .image {
             width: 100%;
             max-width: 300px;
@@ -287,13 +290,13 @@
             text-decoration: none;
         }
 
-        .mission-image-des{
+        .mission-image-des {
             display: flex;
-    min-height: fit-content;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+            min-height: fit-content;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         /* Responsive styling */
@@ -308,7 +311,7 @@
             }
         }
 
-        .team-member p{
+        .team-member p {
             color: darkorange;
             font-weight: bold;
         }
@@ -330,10 +333,10 @@
         <div class="mission-container display-flex justify-content-center">
             <h2>Our Mission</h2>
             <div class="mission-image-des">
-            <img class="image" src="images/mission.png" alt="Mission Image">
-            <p>At <strong>My Chemistry Website</strong>, our mission is to foster a deeper understanding of organic
-                chemistry among students. We provide comprehensive learning materials and resources that empower
-                students to excel in their chemistry studies.</p>
+                <img class="image" src="images/mission.png" alt="Mission Image">
+                <p>At <strong>My Chemistry Website</strong>, our mission is to foster a deeper understanding of organic
+                    chemistry among students. We provide comprehensive learning materials and resources that empower
+                    students to excel in their chemistry studies.</p>
             </div>
         </div>
 
@@ -427,44 +430,6 @@
         </div>
     </section>
 
-    <footer class="footer mt-auto py-3" style="
-    background: linear-gradient(45deg, darkblue, lightblue, transparent);
-    ">
-       
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>Your go-to resource for Grade 11 and 12 Organic Chemistry, providing comprehensive learning
-                        materials and resources to help students excel in their chemistry studies.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/learn">Learn</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Email: sitaulaprabesh07@gmail.com<br>Phone: +977 9848589357</p>
-                    <a href="https://prabeshsitaula.com.np/" target="_blank">Prabesh Sitaula</a>
-                </div>
-            </div>
-            <hr>
-            <p class="text-muted">© 2023 My Chemistry Website. All rights reserved.</p>
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <h5>Advertise with Us</h5>
-                    <p>Place your advertisement content here.</p>
-                </div>
-            </div>
-            
-        </div>
-    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const teamMembers = document.querySelectorAll(".team-member");
@@ -495,3 +460,5 @@
             window.addEventListener("scroll", showTeamMember);
         });
     </script>
+
+<%- include('footer.ejs') %>

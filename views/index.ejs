@@ -1,13 +1,15 @@
-<%- include('layout') %>
+<%- include('header.ejs', {title: 'Home'}) %>
     <style>
         .home {
             min-height: 100vh;
-            background-color: rgb(15 15 16 / 92%);
-            background-blend-mode: overlay;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: fit-content;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: fit-content; */
+    background: url(https://img.freepik.com/free-vector/retro-science-background_23-2148557500.jpg);
+    background-size: cover;
+    background-position: center;
         }
 
         
@@ -23,13 +25,13 @@
         }
         .home-about h2 {
             font-size: 49px;
-            color: white;
+            color: black;
             font-weight: bold;
             padding: 20px;
         }
 
         .home-about p {
-            color: white;
+            color: black;
             font-family: cursive;
             padding-left: 10px;
             font-size: 20px;
@@ -42,15 +44,15 @@
         @media(max-width: 850px) {
             .home {
                 flex-direction: column;
-            }
 
+            }
+            
             .home-about{
                 max-width: 100%;
             }
 
             .home img {
-                margin-bottom: 30px;
-                margin-right: 0px;
+                display: none;
             }
 
             .home .learn{
@@ -85,41 +87,4 @@
         <p align="center" class="learn"><a href="/learn" class="cta-button">Start Learning</a></p>
         <img src="images/dashboard.png" alt="">
     </main>
-    <footer class="footer mt-auto py-3" style="
-  background: linear-gradient(45deg, darkblue, lightblue, transparent);
-  ">
-
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>Your go-to resource for Grade 11 and 12 Organic Chemistry, providing comprehensive learning
-                        materials and resources to help students excel in their chemistry studies.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/learn">Learn</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Email: sitaulaprabesh07@gmail.com<br>Phone: +977 9848589357</p>
-                    <a href="https://prabeshsitaula.com.np/" target="_blank">Prabesh Sitaula</a>
-                </div>
-            </div>
-            <hr>
-            <p class="text-muted">© 2023 My Chemistry Website. All rights reserved.</p>
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <h5>Advertise with Us</h5>
-                    <p>Place your advertisement content here.</p>
-                </div>
-            </div>
-            
-        </div>
-    </footer>
+    <%- include('footer.ejs') %>
