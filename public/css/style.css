@@ -83,7 +83,9 @@
   color: darkred;
 }
 
-.card img:hover{
+.title-img img:hover{
   width: 600px;
   transition: 0.5s ease-in-out;
 }
+
+
