@@ -41,7 +41,7 @@
   
   .bg-light{
     min-height: 110px;
-    background: linear-gradient( blue, #1ea7fd)!important;
+    background: linear-gradient(purple, purple) !important;
   }
 
   .navbar-light .navbar-nav .nav-link{
