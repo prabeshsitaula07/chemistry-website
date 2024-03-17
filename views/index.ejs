@@ -1,88 +1,74 @@
-<%- include('header.ejs', {title: 'Home'}) %>
-    <style>
-        .home {
-            background-blend-mode: overlay;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, black, transparent);
-    position: sticky;
-}
+<%- include('header.ejs', {title: 'Learn'}) %>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner height80-lineargrad">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="/images/1.png" alt="Second slide">
+      </div>
+      <div class="carousel-item height80-lineargrad">
+        <img class="d-block w-100" src="/images/2.png" alt="Second slide">
+      </div>
+      <div class="carousel-item height80-lineargrad">
+        <img class="d-block w-100" src="/images/3.png" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
 
+  <section class="featured-content">
+    <div class="container">
+      <h2 align="center">Start With</h2>
+      <div class="row">
+          <div class="col-md-4">
+            <div class="card title-img">
+              
+              <a href="learn-features/naming-reaction"><img src="/images/1.jpg"
+                class="card-img-top" alt="Featured Content 1">
+              <div class="card-body">
+                <h5 class="card-title">Name Reaction</h5>
+                <p class="card-text">All the Naming Reactions that are especially focused in grade 11 and 12.</p>
+              </div>
+            </a>
+            </div>
+          </div>
         
-        .home img {
-            max-width: 310px;
-            border-radius: 80px;
-            margin-right: 35px;
-            margin-top: 35px;
-            margin-bottom: 35px;
-        }
-        .home-about{
-            max-width: 50%;
-        }
-        .home-about h2 {
-            font-size: 49px;
-            color: white;
-            font-weight: bold;
-            padding: 20px;
-        }
-
-        .home-about p {
-            color: whitesmoke;
-            font-family: cursive;
-            padding-left: 10px;
-            font-size: 20px;
-            width: 80%;
-        }
-        .home .learn{
-            position: absolute;
-            bottom: 0;
-        }
-        @media(max-width: 850px) {
-            .home {
-                flex-direction: column;
-
-            }
-            
-            .home-about{
-                max-width: 100%;
-            }
-
-            .home img {
-                display: none;
-            }
-
-            .home .learn{
-                position: relative;
-            }
-
-        }
-       
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: rgb(37, 119, 233);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: rgba(92, 92, 221, 0.836);
-            color: white;
-            text-decoration: none;
-        }
-    </style>
-    <main class="home">
-        <div class="home-about">
-            <h2>A Complete Learning Platform for your aspirations</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio ullam quisquam, et nisi esse eveniet
-                aperiam, voluptates consectetur omnis veritatis amet sapiente non laudantium corporis qui, a blanditiis
-                iure eius?</p>
+        <div class="col-md-4">
+          <div class="card title-img">
+            <a href="learn-features/naming-reaction"><img src="https://iimtu.edu.in/blog/wp-content/uploads/2023/10/Chemistry-1.jpg"
+              class="card-img-top" alt="Featured Content 1">
+            <div class="card-body">
+              <h5 class="card-title">Naming Reaction</h5>
+              <p class="card-text">All the Naming Reactions that are especially focused in grade 11 and 12.</p>
+            </div>
+          </a>
+          </div>
         </div>
-        <p align="center" class="learn"><a href="/learn" class="cta-button">Start Learning</a></p>
-        <img src="images/dashboard.png" alt="">
-    </main>
-    <%- include('footer.ejs') %>
+        <div class="col-md-4">
+          <div class="card title-img">
+            <a href="learn-features/naming-reaction"><img src="https://blogassets.leverageedu.com/blog/wp-content/uploads/2019/11/23171501/Branches-of-Chemistry.jpg"
+              class="card-img-top" alt="Featured Content 1">
+            <div class="card-body">
+              <h5 class="card-title">Naming Reaction</h5>
+              <p class="card-text">All the Naming Reactions that are especially focused in grade 11 and 12.</p>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('footer.ejs') %>

@@ -21,13 +21,6 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/learn', (req, res) => {
-    res.render('learn');
-});
-
-app.get('/blog', (req, res) => {
-    res.render('blog');
-});
 
 app.get('/contact', (req, res) => {
     res.render('contact');
