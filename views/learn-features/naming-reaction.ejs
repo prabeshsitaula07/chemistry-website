@@ -91,29 +91,34 @@
 </div>
 
 <script>
-    function searchReactions() {
+  function searchReactions() {
       const searchInput = document.getElementById("searchInput");
-      const searchTerm = searchInput.value.toLowerCase();
+      const searchTerm = searchInput.value.trim().toLowerCase();
       const reactionsList = document.getElementById("reactionsList");
       const suggestionsContainer = document.getElementById("suggestionsContainer");
-  
+
       // Clear previous suggestions and reaction cards
       suggestionsContainer.innerHTML = "";
-  
+
       // Filter reactions based on the search term
       const filteredReactions = Array.from(reactionsList.getElementsByClassName("reaction-card")).filter((reaction) => {
-        const title = reaction.querySelector(".card-title a").innerText.toLowerCase();
-        return title.includes(searchTerm);
+          const title = reaction.querySelector(".card-title a").innerText.toLowerCase();
+          return title.includes(searchTerm);
       });
-  
-      // Display suggestions and matching reaction cards
-      filteredReactions.forEach((reaction) => {
-        const suggestion = document.createElement("div");
-        suggestion.className = "alert alert-info";
-        suggestion.innerHTML = reaction.querySelector(".card-title").innerHTML;
-        suggestionsContainer.appendChild(suggestion);
-      });
-    }
+
+      // Display up to 6 suggestions and matching reaction cards
+      for (let i = 0; i < filteredReactions.length && i < 6; i++) {
+          const suggestion = document.createElement("div");
+          suggestion.className = "alert alert-info";
+          suggestion.innerHTML = filteredReactions[i].querySelector(".card-title").innerHTML;
+          suggestionsContainer.appendChild(suggestion);
+      }
+  }
+
+  // Add event listener for input changes
+  document.getElementById("searchInput").addEventListener("input", searchReactions);
 </script>
+
+
 
 <%- include('../footer.ejs') %>
