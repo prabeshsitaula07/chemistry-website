@@ -1,18 +1,13 @@
-
 <%- include('../../header.ejs') %>
 
     <style>
-        .back-btn button {
-            margin: 40px;
-            height: 50px;
-            width: 120px;
-            border-radius: 12px;
-            color: white;
-            background: #4b23ffcc;
+        .back-btn img {
+            height: 40px;
+            margin: 20px;
         }
 
-        .back-btn button:hover {
-            background: #4420e4cc;
+        .back-btn img:hover {
+            height: 42px;
         }
 
         .card-body p {
@@ -30,15 +25,15 @@
             text-decoration: none !important;
         }
 
-       @media(max-width: 900px){
-        .card-body img{
-            width: 100%;
-            padding: 10px;
+        @media(max-width: 900px) {
+            .card-body img {
+                width: 100%;
+                padding: 10px;
+            }
         }
-       }
     </style>
 
-    <a href="../naming-reaction" class="back-btn"><button><--Back</button></a>
+    <a href="../naming-reaction" class="back-btn"><img src="../../reaction-image/back.png" alt=""></a>
     <div class="container" id="mainContainer">
         <div class="accordion" id="accordionSections">
 
@@ -55,9 +50,10 @@
                 <div id="collapseGeneralReaction" class="collapse show" aria-labelledby="headingGeneralReaction">
                     <div class="card-body">
                         <!-- Your content for General Reaction goes here -->
-                        <p><%= general_reaction %><br>
-                            <br>
-                            <img src=<%= image %> alt="">
+                        <p>
+                            <%= general_reaction %><br>
+                                <br>
+                                <img src=<%=image %> alt="">
                         </p>
                     </div>
                 </div>
@@ -76,7 +72,9 @@
                 <div id="collapseDescription" class="collapse" aria-labelledby="headingDescription">
                     <div class="card-body">
                         <!-- Your content for Description goes here -->
-                        <p><%= description %></p>
+                        <p>
+                            <%= description %>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -94,7 +92,9 @@
                 <div id="collapseExample" class="collapse" aria-labelledby="headingExample">
                     <div class="card-body">
                         <!-- Your content for Example goes here -->
-                        <p><%= example %></p>
+                        <p>
+                            <%= example %>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,9 @@
                 <div id="collapseApplicationIOC" class="collapse" aria-labelledby="headingApplicationIOC">
                     <div class="card-body">
                         <!-- Your content for Example goes here -->
-                        <p><%= application %></p>
+                        <p>
+                            <%= application %>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -128,7 +130,9 @@
                 <div id="collapseModernApplication" class="collapse" aria-labelledby="headingModernApplication">
                     <div class="card-body">
                         <!-- Your content for Example goes here -->
-                        <p><%= modern_application %></p>
+                        <p>
+                            <%= modern_application %>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -146,7 +150,9 @@
                 <div id="collapseHistory" class="collapse" aria-labelledby="headingHistory">
                     <div class="card-body">
                         <!-- Your content for History goes here -->
-                        <p><%= history %></p>
+                        <p>
+                            <%= history %>
+                        </p>
                         <br><a href="https://www.sciencedirect.com/topics/neuroscience/2-4-dinitrophenol"
                             target="_blank">Learn More</a>
                     </div>
