@@ -36,18 +36,6 @@
             margin: 8px;
         }
 
-        .about-section {
-            padding: 50px;
-            text-align: center;
-            background: linear-gradient(45deg, lightblue, transparent);
-            color: white;
-            min-height: 70vh;
-        }
-
-        .about-section p {
-            font-family: monospace;
-        }
-
         .container {
             padding: 0 16px;
         }
@@ -86,35 +74,11 @@
             }
         }
 
-
-        .about-section h1 {
-            color: black;
-            font-size: 2.8em;
-            font-weight: bolder;
-            font-family: initial;
-            text-transform: uppercase;
-            letter-spacing: 8px;
-
-        }
-
-        @media screen and (max-width: 520px) {
-            .about-section h1 {
-                letter-spacing: 4px;
-            }
-        }
-
-        .about-section .about-sub_heading {
-            font-size: 2.2em;
-            font-weight: bold;
-            color: #140f0fc2;
-            line-height: 35px;
-        }
-
         .team-section {
 
             text-align: center;
             padding: 50px 0;
-            background: #8080801c;
+            background: linear-gradient(-162deg, #540c54c4, transparent);
         }
 
         .team-members {
@@ -164,6 +128,9 @@
 
         .team-member h3 {
             margin: 10px 0;
+            color: white;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         .social-links {
@@ -200,33 +167,6 @@
             font-weight: bold;
         }
 
-        .about {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        .about h1 {
-            color: #1ea7fd;
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .about h2 {
-            color: #1ea7fd;
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .content-container , .about-section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: black;
-        }
 
         .content-container {
             display: flex;
@@ -273,23 +213,6 @@
             color: #ff5733;
         }
 
-        /* Emphasize the call-to-action */
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: rgb(37, 119, 233);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: rgba(92, 92, 221, 0.836);
-            color: white;
-            text-decoration: none;
-        }
-
         .mission-image-des {
             display: flex;
             min-height: fit-content;
@@ -312,22 +235,11 @@
         }
 
         .team-member p {
-            color: darkorange;
+            color: darkblue;
             font-weight: bold;
         }
     </style>
 
-
-    <div class="about-section display-flex flex-direction-column justify-content-center">
-        <h1 style="color: black;">About Us</h1>
-        <p class="about-sub_heading">Welcome to My Chemistry Website.</p>
-        <p style="text-align: justify;">Your go-to resource for Grade 11 and 12 Organic Chemistry.
-            We are passionate about providing comprehensive learning materials and resources to help
-            students excel in their chemistry studies. Explore our website for valuable insights,
-            educational content, and stay updated with the latest in organic chemistry.
-        </p>
-        </p>
-    </div>
 
     <div class="content-container">
         <div class="mission-container display-flex justify-content-center">
@@ -351,8 +263,6 @@
             </ul>
         </div>
     </div>
-
-    <p align="center"><a href="/" class="cta-button">Explore Now</a></p>
     </div>
 
     <!--  -->
@@ -366,7 +276,7 @@
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/prabesh-sitaula-b3832a264/" target="_blank">LinkedIn</a>
                     <a href="https://github.com/prabeshsitaula07" target="_blank">Github</a>
-                    <a href="https://prabeshsitaula.com.np" target="_blank">Prabesh Sitaula</a>
+                    <a href="https://prabeshsitaula.com.np" target="_blank">Portfolio</a>
                 </div>
             </div>
 
@@ -461,4 +371,4 @@
         });
     </script>
 
-<%- include('footer.ejs') %>
+    <%- include('footer.ejs') %>

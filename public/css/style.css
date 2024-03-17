@@ -94,5 +94,8 @@
 
 .height80-lineargrad{
  background: linear-gradient(45deg, black, transparent); 
- height: 80vh;
+}
+
+#carouselExampleIndicators{
+  padding-top: 2px;
 }
