@@ -80,7 +80,11 @@
 }
 
 .footer .col-md-4 h5{
-  color: darkred;
+  color: yellow;
+}
+
+.footer .col-md-4 p{
+  color: orange;
 }
 
 .title-img img:hover{
