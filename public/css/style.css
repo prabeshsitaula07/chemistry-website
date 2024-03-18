@@ -87,6 +87,10 @@
   color: white;
 }
 
+.footer a{
+  color: navajowhite;
+}
+
 .height80-lineargrad{
  background: linear-gradient(45deg, black, transparent); 
 }
