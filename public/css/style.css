@@ -270,6 +270,7 @@ h2 {
     background: #77078a3b;
     width: 450px;
     height: 340px;
+    box-shadow: 0 5px 8px 0 purple;
     justify-content: center;
 }
 
