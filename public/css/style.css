@@ -87,15 +87,6 @@
   color: white;
 }
 
-.title-img img:hover{
-  width: 600px;
-  transition: 0.5s ease-in-out;
-}
-
-.card a:hover{
-  text-decoration: none;
-}
-
 .height80-lineargrad{
  background: linear-gradient(45deg, black, transparent); 
 }
@@ -138,6 +129,19 @@
 
 .title {
   color: grey;
+}
+
+.start-btn{
+  border: 1px solid purple;
+  background: purple;
+  padding: 10px 55px;
+  border-radius: 20px;
+  color: white;
+}
+
+.start-btn:hover{
+  background: #800080cf;
+  transition: 0.2s ease;
 }
 
 @media screen and (max-width: 650px) {
@@ -245,7 +249,8 @@ h2 {
 }
 
 .about{
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -262,16 +267,12 @@ h2 {
 
 .mission-container,
 .values-container {
-  display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
     border-radius: 30px;
     background: #77078a3b;
     width: 450px;
     height: 340px;
     box-shadow: 0 5px 8px 0 purple;
-    justify-content: center;
 }
 
 
@@ -294,14 +295,15 @@ em {
 
 
 /* Responsive styling */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .content-container {
       flex-direction: column;
   }
 
   .mission-container,
   .values-container {
-      width: 93%;
+      height: auto;
+      width: auto;
   }
 }
 
