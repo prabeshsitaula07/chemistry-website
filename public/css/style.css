@@ -210,12 +210,14 @@
 
 .social-links {
   position: absolute;
-  top: 43%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s ease, visibility 0.5s ease;
+  background: #80008061;
+  padding: 20px;
 }
 
 .team-member:hover .social-links {
@@ -247,29 +249,23 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  margin: 20px;
+  gap: 20px;
 }
 
 .mission-container,
 .values-container {
-  width: 80%;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   border-radius: 30px;
-  gap: 20px;
   background: #8080801c;
-  margin-top: 20px;
-  max-width: 1040px;
+  width: 50%;
+  height: 340px;
+  justify-content: center;
 }
 
-@media(max-width: 810px) {
-  .mission-image-des {
-      flex-direction: column;
-  }
-}
 
 .image {
   width: 100%;
@@ -288,14 +284,6 @@ em {
   color: #ff5733;
 }
 
-.mission-image-des {
-  display: flex;
-  min-height: fit-content;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
 
 /* Responsive styling */
 @media screen and (max-width: 768px) {
