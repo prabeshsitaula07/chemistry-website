@@ -77,7 +77,7 @@
                     <div class="card-body">
                         <!-- Your content for General Reaction goes here -->
                         <p>
-                            <%= general_reaction %><br>
+                            <%- general_reaction %><br>
                                 <br>
                                 <img src=<%=image %> alt="" style="max-width: 100%;">
                         </p>
@@ -100,26 +100,6 @@
                         <!-- Your content for Description goes here -->
                         <p>
                             <%- description %>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Example Section -->
-            <div class="card" id="cardExample">
-                <div class="card-header" id="headingExample">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseExample')">
-                            ▶ Example
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapseExample" class="collapse" aria-labelledby="headingExample">
-                    <div class="card-body">
-                        <!-- Your content for Example goes here -->
-                        <p>
-                            <%= example %>
                         </p>
                     </div>
                 </div>
@@ -159,28 +139,6 @@
                         <p>
                             <%- modern_application %>
                         </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- History Section -->
-            <div class="card" id="cardHistory">
-                <div class="card-header" id="headingHistory">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" onclick="toggleSection('collapseHistory')">
-                            ▶ History
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapseHistory" class="collapse" aria-labelledby="headingHistory">
-                    <div class="card-body">
-                        <!-- Your content for History goes here -->
-                        <p>
-                            <%- history %>
-                        </p>
-                        <br><a href="https://www.sciencedirect.com/topics/neuroscience/2-4-dinitrophenol"
-                            target="_blank">Learn More</a>
                     </div>
                 </div>
             </div>
