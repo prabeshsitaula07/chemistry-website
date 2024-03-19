@@ -21,6 +21,7 @@
             margin-top: 10px;
             border: 1px solid grey !important;
             border-radius: 10px !important;
+            max-width: 700px;
         }
 
         .btn-link {
@@ -29,18 +30,37 @@
 
         @media(max-width: 900px) {
             .card-body img {
-                width: 100%;
                 padding: 10px;
             }
         }
-        .container{
+
+        .container {
             margin-bottom: 30px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .accordion {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 700px;
+        }
+
+        strong {
+            color: black;
         }
     </style>
 
     <a href="../naming-reaction" class="back-btn"><img src="../../reaction-image/back.png" alt=""></a>
-    <h2 align="center"><%= title %></h2>
-    <div class="container" id="mainContainer">
+    <h2 align="center">
+        <%= title %>
+    </h2>
+    <div class="main-container" id="mainContainer">
         <div class="accordion" id="accordionSections">
 
             <!-- General Reaction Section -->
@@ -59,7 +79,7 @@
                         <p>
                             <%= general_reaction %><br>
                                 <br>
-                                <img src=<%=image %> alt="">
+                                <img src=<%=image %> alt="" style="max-width: 100%;">
                         </p>
                     </div>
                 </div>
@@ -79,7 +99,7 @@
                     <div class="card-body">
                         <!-- Your content for Description goes here -->
                         <p>
-                            <%= description %>
+                            <%- description %>
                         </p>
                     </div>
                 </div>
@@ -118,7 +138,7 @@
                     <div class="card-body">
                         <!-- Your content for Example goes here -->
                         <p>
-                            <%= application %>
+                            <%- application %>
                         </p>
                     </div>
                 </div>
@@ -137,7 +157,7 @@
                     <div class="card-body">
                         <!-- Your content for Example goes here -->
                         <p>
-                            <%= modern_application %>
+                            <%- modern_application %>
                         </p>
                     </div>
                 </div>
@@ -157,7 +177,7 @@
                     <div class="card-body">
                         <!-- Your content for History goes here -->
                         <p>
-                            <%= history %>
+                            <%- history %>
                         </p>
                         <br><a href="https://www.sciencedirect.com/topics/neuroscience/2-4-dinitrophenol"
                             target="_blank">Learn More</a>
