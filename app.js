@@ -17,16 +17,6 @@ app.get('/', (_, res) => {
   res.render('index'); 
 });
 
-app.get('/about', (req, res) => {
-    res.render('index/#about');
-});
-
-
-app.get('/contact', (req, res) => {
-    res.render('contact');
-});
-
-
 // Route for the Naming Reaction page
 app.get('/learn-features/naming-reaction', (req, res) => {
   res.render('learn-features/naming-reaction');
@@ -46,12 +36,12 @@ app.get('/learn-features/reactions/wurtz-reaction', (req, res) => {
   res.render('learn-features/reactions/wurtz-reaction');
 });
 
-app.get('/learn-features/reactions/wurtz-fitting-reaction', (req, res) => {
-  res.render('learn-features/reactions/wurtz-fitting-reaction');
+app.get('/learn-features/reactions/wurtz-fittig-reaction', (req, res) => {
+  res.render('learn-features/reactions/wurtz-fittig-reaction');
 });
 
-app.get('/learn-features/reactions/fitting-reaction', (req, res) => {
-  res.render('learn-features/reactions/fitting-reaction');
+app.get('/learn-features/reactions/fittig-reaction', (req, res) => {
+  res.render('learn-features/reactions/fittig-reaction');
 });
 
 app.get('/learn-features/reactions/friedel-crafts-alkylation-reaction', (req, res) => {
