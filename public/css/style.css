@@ -279,7 +279,11 @@ h2 {
     box-shadow: 0 5px 8px 0 purple;
 }
 
+.mission-container:hover, .values-container:hover{
+  background: #77078a57;
+  box-shadow:  0 10px 8px 0 purple;
 
+}
 .image {
   width: 100%;
   max-width: 300px;
