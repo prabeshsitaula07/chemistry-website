@@ -18,8 +18,8 @@ app.get('/', (_, res) => {
 });
 
 // Route for the Naming Reaction page
-app.get('/learn-features/naming-reaction', (req, res) => {
-  res.render('learn-features/naming-reaction');
+app.get('/learn-features/name-reaction', (req, res) => {
+  res.render('learn-features/name-reaction');
 });
 
 
