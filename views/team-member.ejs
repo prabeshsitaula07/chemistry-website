@@ -1,0 +1,104 @@
+<section class="team-section">
+    <h2 align="center">Our Team</h2>
+    <div class="team-members" align="center">
+        <div class="team-member">
+            <img src="images/prabesh ko photo.jpg" alt="Team Member 1">
+            <h3>Prabesh Sitaula</h3>
+            <p>CEO</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/prabesh-sitaula-b3832a264/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/prabeshsitaula07" target="_blank">Github</a>
+                <a href="https://prabeshsitaula.com.np" target="_blank">Portfolio</a>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="images/bibash.jpg" alt="Team Member 2">
+            <h3>Bibash Shrestha</h3>
+            <p>Designer</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/bibash.shrestha.148553" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/bibashshrestha08/" target="_blank">Instagram</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="images/rabin.jpg" alt="Team Member 2">
+            <h3>Rabin Chhatkuli</h3>
+            <p>Software Developer</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100075232735581" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/rabinxtkuli/" target="_blank">Instagram</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="images/tenzeen.jpg" alt="Team Member 3">
+            <h3>Tenzeen Tamang</h3>
+            <p>Program Manager</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/tenzo_111/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/tenzeen.fc" target="_blank">Facebook</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="images/avishek.jpg" alt="Team Member 2">
+            <h3>Avishek Subedi</h3>
+            <p>Content Creator</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/avishek.subedi.908" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="images/bhandari.jpg" alt="Team Member 2">
+            <h3>Sushant Bhandari</h3>
+            <p>Marketing Head</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/sushant.bhandari07/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/sushant.bhandari.3367" target="_blank">Facebook</a>
+                <a href="" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+
+        <!-- Repeat the structure for other team members -->
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const teamMembers = document.querySelectorAll(".team-member");
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function showTeamMember() {
+            teamMembers.forEach((member) => {
+                if (isInViewport(member)) {
+                    member.classList.add("fade-in");
+                }
+            });
+        }
+
+        // Initial check when the page loads
+        showTeamMember();
+
+        // Check when the user scrolls
+        window.addEventListener("scroll", showTeamMember);
+    });
+</script>
